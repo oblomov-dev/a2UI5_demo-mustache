@@ -1,5 +1,5 @@
 # Demo Mustache using abap2UI5
-The Mustache open-source project for ABAP can simplify the creation of XMLs. This demo uses this to define Views for abap2UI5.
+The Mustache open-source project for ABAP can simplify the creation of XMLs. This demo utilizes it to define views for abap2UI5.
 <br>
 1. Intall the open-source project [**Mustache**](https://github.com/sbcgua/abap_mustache)
 2. Install [**abap2UI5**](https://github.com/oblomov-dev/abap2UI5)

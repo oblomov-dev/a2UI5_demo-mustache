@@ -7,7 +7,6 @@ The Mustache open-source project for ABAP simplifies XML generation and can be u
 <br>
 **UI5 Output:**
 <img width="1487" alt="image" src="https://github.com/oblomov-dev/demo_abap2UI5-mustache/assets/102328295/702170be-3718-4bfa-b683-0fc35b01106d">
-
 **Backend XML - Input for Mustache:**
 ```XML
 <mvc:View controllerName="z2ui5_controller"

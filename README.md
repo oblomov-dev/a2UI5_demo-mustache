@@ -78,4 +78,3 @@ Frontend XML - UI5 View:
 
 UI5 Output:
 <img width="1200" alt="image" src="https://github.com/oblomov-dev/demo_abap2UI5-mustache/assets/102328295/702170be-3718-4bfa-b683-0fc35b01106d">
-Backend:

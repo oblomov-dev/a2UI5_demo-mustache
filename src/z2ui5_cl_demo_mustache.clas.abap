@@ -1,4 +1,4 @@
-CLASS Z2UI5_CL_DEMO_MUSTACHE DEFINITION
+CLASS z2ui5_cl_demo_mustache DEFINITION
   PUBLIC
   FINAL
   CREATE PUBLIC .
@@ -16,11 +16,11 @@ CLASS Z2UI5_CL_DEMO_MUSTACHE DEFINITION
 
     TYPES:
       BEGIN OF ty_S_table,
-        name      TYPE string,
-        icon      TYPE string,
-        progress  TYPE string,
-        state     TYPE string,
-        descr     TYPE string,
+        name     TYPE string,
+        icon     TYPE string,
+        progress TYPE string,
+        state    TYPE string,
+        descr    TYPE string,
       END OF ty_S_table.
     TYPES ty_T_table TYPE STANDARD TABLE OF ty_S_table WITH EMPTY KEY.
 
@@ -33,24 +33,22 @@ CLASS Z2UI5_CL_DEMO_MUSTACHE DEFINITION
         t_footer  TYPE ty_t_button,
       END OF ty_s_view.
 
-    CONSTANTS: c_nl TYPE c VALUE cl_abap_char_utilities=>newline.
-
   PRIVATE SECTION.
 ENDCLASS.
 
 
 
-CLASS Z2UI5_CL_DEMO_MUSTACHE IMPLEMENTATION.
+CLASS z2ui5_cl_demo_mustache IMPLEMENTATION.
 
   METHOD z2ui5_if_app~main.
 
     CASE client->get( )-event.
       WHEN `INFO`.
-        client->popup_message_box( `Information` ).
+        client->message_box_display( `Information` ).
       WHEN `USER`.
-        client->popup_message_box( `User` ).
+        client->message_box_display( `User` ).
       WHEN `POST`.
-        client->popup_message_box( `Post sent to the server` ).
+        client->message_box_display( `Post sent to the server` ).
     ENDCASE.
 
 
@@ -85,7 +83,7 @@ CLASS Z2UI5_CL_DEMO_MUSTACHE IMPLEMENTATION.
         `</Page></Shell></mvc:View>`
      ).
 
-    client->set_next( VALUE #( xml_main = lo_mustache->render( ls_view ) ) ).
+    client->view_display( lo_mustache->render( ls_view ) ).
 
   ENDMETHOD.
 
